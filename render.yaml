@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: laravel-app
+    env: docker
+    plan: free
+    repo: https://github.com/Jhostin565/Hello-Laravel-Render.git
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_KEY
+        sync: false
+      - key: APP_DEBUG
+        value: false
