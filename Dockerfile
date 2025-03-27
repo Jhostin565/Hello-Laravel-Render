@@ -24,4 +24,6 @@ RUN chmod -R 777 storage bootstrap/cache
 EXPOSE 80
 
 # Comando de inicio del servidor Laravel
+RUN touch /var/www/html/storage/logs/laravel.log && chmod -R 777 /var/www/html/storage
+
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=80"]
